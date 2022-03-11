@@ -1,0 +1,88 @@
+.tasks-section {
+  flex: 1;
+  min-width: 250px;
+
+}
+
+.tasks-section__tittle {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  
+}
+
+.tasks-section__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.tasks-section__item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tasks-section__item__label{
+  flex: 1;
+  display: flex;
+}
+
+.tasks-section__item__checkbox {
+  all: unset;
+  margin-right: 6px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-base);
+  border-radius: var(--radious-custom);
+  position: relative;
+  cursor: pointer;
+}
+
+.tasks-section__item__checkbox:checked{
+  background-color: var(--color-base);
+}
+
+.tasks-section__item__checkbox:checked::before{
+  content: '';
+  display: block;
+  width: 2px;
+  height: 12px;
+  background: var(--color-white);
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  transform: rotate(45deg);
+}
+
+.tasks-section__item__checkbox:checked::after{
+  content: '';
+  display: block;
+  width: 2px;
+  height: 5px;
+  background: var(--color-white);
+  top: 8px;
+  left: 3px;
+  position: absolute;
+  transform: rotate(-45deg)
+;
+
+}
+
+.tasks-section__item__text {
+  flex: 1;
+  cursor: pointer;
+} 
+
+.tasks-section__item__checkbox:checked + .tasks-section__item__text {
+  text-decoration: line-through;
+}
+
+.tasks-section__item__remove {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+}
